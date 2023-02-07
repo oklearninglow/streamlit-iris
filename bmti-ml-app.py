@@ -25,7 +25,7 @@ def user_input_features():
     data = {'Bmi': Bmi,
             'Pain1': Pain1,
             'Pain2': Pain2,
-            'Pain3': Pain3}
+            'Pain3': Pain3,
             'Pain4': Pain4}
     features = pd.DataFrame(data, index=[0])
     return features
