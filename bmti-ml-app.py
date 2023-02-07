@@ -17,16 +17,16 @@ This app predicts the **MBTI** type!
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    Bmi = st.sidebar.slider('Body Mass Index', 14.06, , 42.18)
+    Bmi = st.sidebar.slider('Body Mass Index', 14.06, 28.12 , 42.18)
     Pain1 = st.sidebar.slider('Pain1', 2.0, 4.4, 3.4)
     Pain2 = st.sidebar.slider('Pain2', 1.0, 6.9, 1.3)
     Pain3 = st.sidebar.slider('Pain3', 0.1, 2.5, 0.2)
     Pain4 = st.sidebar.slider('Pain4', 0.1, 2.5, 0.2)
-    data = {'Bmi': sepal_length,
-            'Pain1': sepal_width,
-            'Pain2': petal_length,
-            'Pain3': petal_width}
-            'Pain4': petal_width}
+    data = {'Bmi': Bmi,
+            'Pain1': Pain1,
+            'Pain2': Pain2,
+            'Pain3': Pain3}
+            'Pain4': Pain4}
     features = pd.DataFrame(data, index=[0])
     return features
 
@@ -40,14 +40,16 @@ from joblib import load
 # Load the saved StackingClassifier model from disk
 loaded_stacking = load('best_model.joblib')
 
+data = pd.read_csv(https://github.com/oklearninglow/streamlit-iris/blob/main/MbtX.csv)
+target = pd.read_csv(https://github.com/oklearninglow/streamlit-iris/blob/main/Mbty.csv)
 X = df.data
 Y = df.target
 
 
 loaded_stacking.fit(X, Y)
 
-prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
+prediction = loaded_stacking.predict(df)
+prediction_proba = loaded_stacking.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
 st.write(data.target_names)
