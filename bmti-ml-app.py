@@ -40,8 +40,8 @@ from joblib import load
 # Load the saved StackingClassifier model from disk
 loaded_stacking = load('best_model.joblib')
 
-data = pd.read_csv(https://github.com/oklearninglow/streamlit-iris/blob/main/MbtX.csv)
-target = pd.read_csv(https://github.com/oklearninglow/streamlit-iris/blob/main/Mbty.csv)
+data = pd.read_csv('https://github.com/oklearninglow/streamlit-iris/blob/main/MbtX.csv')
+target = pd.read_csv('https://github.com/oklearninglow/streamlit-iris/blob/main/Mbty.csv')
 X = df.data
 Y = df.target
 
